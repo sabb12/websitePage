@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Page</title>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/pageable@latest/dist/pageable.min.css"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <img src="images/Cafe-logo.png" class="logo">
+    <nav>
+        <a href="#" class="mainMenuBar" onclick="pageable.scrollToPage(1)">HOME</a>
+        <a href="menu.html" class="mainMenuBar" onclick="pageable.scrollToPage(2)">MENU</a>
+        <a href="#" class="mainMenuBar" onclick="pageable.scrollToPage(3)">CONTACT</a>
+    </nav>
+    <nav>
+        <a href="#" >LOCATION</a>
+        <a href="#" >KOREAN</a>
+        <a href="#" >English</a>
+        <a href="#" >Chinese</a>
+    </nav>
+</header>
+<body>
+    <!--  <section data-anchor="Page 1" id="page-1" class="pg-page pg-active" , class="pg-page> -->
+    <div id="container">
+        <section data-anchor="Page 1" id="page-1" class="pg-page pg-active">
+            <div class="slider" id="slider">
+                <input type="radio" name="slide-radios" class="slide-radio" checked id="slide-radio-1">
+                <input type="radio" name="slide-radios" class="slide-radio" id="slide-radio-2">
+                <input type="radio" name="slide-radios" class="slide-radio" id="slide-radio-3">
+                <input type="radio" name="slide-radios" class="slide-radio" id="slide-radio-4">
+        
+                <div class="pagination">
+                    <label for="slide-radio-1">o</label>
+                    <label for="slide-radio-2">o</label>
+                    <label for="slide-radio-3">o</label>
+                    <label for="slide-radio-4">o</label>
+                </div>  ` 
+                <div class="slide" id="slide-1">
+                    <div class="slide-content">
+                        <h1>Dot Drip</h1>
+                        <h2>by Leo</h2>
+                        <a href="">download</a>
+                    </div>
+                    <img src="images/slider-Img-1.jpg" alt="10분 동안의 점드립">
+                </div>
+                <div class="slide" id="slide-2">
+                    <div class="slide-content">
+                        <h1>망 드립</h1>
+                        <h2>by Leo</h2>
+                        <a href="">download</a>
+                    </div>
+                    <img src="images/slider-Img-2.jpg" alt="망드립">
+                </div>
+                <div class="slide" id="slide-3">
+                    <div class="slide-content">
+                        <h1>Hand Drip</h1>
+                        <h2>by Leo</h2>
+                        <a href="">download</a>
+                    </div>
+                    <img src="images/slider-Img-3.jpg" alt="점드립">
+                </div>
+                <div class="slide" id="slide-4">
+                    <div class="slide-content">
+                        <h1>카페포은</h1>
+                        <h2>by Leo</h2>
+                        <a href="">download</a>
+                    </div>
+                    <img src="images/slider-Img-4.jpg" alt="10분 동안의 점드립">
+                </div>
+            </div>
+        </section>
+        <section data-anchor="Page 2" id="page-2" class="pg-page">
+            <h1>MENU</h1>
+        </section>
+        <section data-anchor="Page 3" id="page-3" class="pg-page">
+            <h1>CONTACT</h1>
+        </section>
+    </div>
+    <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

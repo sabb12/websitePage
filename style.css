@@ -1,0 +1,152 @@
+/* import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html {
+    scroll-behavior: smooth;
+} */
+
+section  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section h1 {
+    font-size: 90px;
+    color: #fff;
+}
+
+#page-1 {
+    background: #1abc9c;
+}
+
+#page-2 {
+    background: #3498db;
+}
+
+
+#page-3 {
+    background: #e67e22;
+}
+
+header {
+    /*이거 없으면 맨 위에 칸이 생긴다*/
+    position: fixed;
+    background: #ccc;
+    width: 100vw;
+    padding: 15px;
+    text-align: center;
+    z-index: 1;
+}
+
+
+header .mainMenuBar {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 1em;
+    margin-right: 1em;
+    
+}
+
+.logo {
+    display: flex;
+    width: 12vw;
+}
+
+/* .header-Wrapper {
+    background-color: oldlace;
+}
+
+.header-Container {
+    background-color: oldlace;
+
+} */
+
+/*  image */
+/*이렇게 하면 --slide-1-bg로 여러 곳에서 사용 하다 색상만 변경 시 뒤에 #5b9ab0; 변경만 하면됨 */
+:root{
+    --slide-1-bg: #5b9ab0;
+    --slide-2-bg: #785d8a;
+    --slide-3-bg: #5465b3;
+    --slide-4-bg: #13acaf;
+
+    --slide-1-link: #205163;
+    --slide-2-link: #33233D;
+    --slide-3-link: #B39642;
+    --slide-4-link: #B05B27;
+}
+
+/*reset*/
+
+
+/*body*/
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/*slider*/
+.slider{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*easing.net*/
+    transition:transform 1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.slide img {
+    height: 80vh;
+    width: 190vh;
+}
+
+#slide-1 {
+    /* background: var(--slide-1-bg); */
+    left: 0;
+}
+#slide-2 {
+    /* background: var(--slide-2-bg); */
+    left: 100%;
+}
+#slide-3 {
+    /* background: var(--slide-3-bg); */
+    left: 200%;
+}
+#slide-4 {
+    /* background: var(--slide-4-bg); */
+    left: 300%;
+}
+
+#slide-radio-1:checked ~ .slide {transform: translateX(0);}
+#slide-radio-2:checked ~ .slide {transform: translateX(-100%);}
+#slide-radio-3:checked ~ .slide {transform: translateX(-200%);}
+#slide-radio-4:checked ~ .slide {transform: translateX(-300%);}
+
+input {
+    display: none;
+}
+
+.pagination {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 6rem;
+    z-index: 1;
+}
